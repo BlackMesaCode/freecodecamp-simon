@@ -6,9 +6,10 @@ var WriteFilePlugin = require('write-file-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     devtool: 'inline-source-map',
+    target: "web", // Compile for usage in a browser-like environment (default)
     output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
     },
     plugins: [
         // Create HTML file that includes reference to bundled JS.

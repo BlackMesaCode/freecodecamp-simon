@@ -12,10 +12,12 @@
     <!-- prevent mobile devices from faking a bigger viewport, which would result in zoomed out websites -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
+    <!-- favicon support for modern and older browsers; see: http://stackoverflow.com/questions/37073/what-is-currently-the-best-way-to-get-a-favicon-to-display-in-all-browsers-that -->
     <link rel="icon" href="/images/favicon.png" type="image/png" />
     <link rel="shortcut icon" href="/favicon.ico" />
 </head>
 <body>
+    <div id="app"></div>
     
 
     <div id="profiles">
@@ -24,7 +26,7 @@
         <a href="https://www.freecodecamp.com/blackmesacode" title="freecodecamp profile"><i class="fa fa-free-code-camp"></i></a>
     </div>
 
-    <!-- polyfill.io reads user agent arguments and returns only the polyfills that are needed by the users browser -->
+    <!-- polyfill.io reads user agent arguments and returns only the polyfills that are needed by the users browser; alternative would be babel/corejs -->
     <script src="https://cdn.polyfill.io/v1/polyfill.min.js"></script>
 </body>
 </html>

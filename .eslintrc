@@ -1,16 +1,22 @@
 {
   "root": true,
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "sourceType": "module"
   },
   "env": {
     "browser": true,
     "node": true
   },
+  "plugins": ["react"],
   "rules": {
+    "no-console": 0
   }
 }

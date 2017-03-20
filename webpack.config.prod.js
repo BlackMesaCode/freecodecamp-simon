@@ -9,6 +9,7 @@ var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     // devtool: 'source-map', // not working
+    target: "web", // Compile for usage in a browser-like environment (default)
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
