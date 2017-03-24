@@ -15,6 +15,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
+        // Setting node environment variable to production (https://facebook.github.io/react/docs/optimizing-performance.html)
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        }),
         // Create HTML file that includes reference to bundled JS.
         new HtmlWebpackPlugin({
             template: 'src/index.html',
