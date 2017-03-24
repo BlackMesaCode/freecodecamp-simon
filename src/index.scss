@@ -10,17 +10,122 @@ $blue: #094a8f;
 
 
 body {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("./images/bg.png");
+    background-repeat: repeat;
+}
 
+#simon {
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+
+    div {
+        flex-grow: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    background-color: $black;
+    color: $white;
+    padding: 1rem;
+}
+
+#setup {
+    text-align: center;
+    display: flex;
+
+    div {
+        flex-grow: 1;
+        background-color: $white;
+        padding: 0.5rem;
+        &:hover {
+            background-color: $orange;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+
+    
+    #strict-mode {
+        #strict-mode-checkbox {
+            margin-right: 0.2rem;
+        }
+
+        #strict-mode-label {
+            display: inline-block;
+            width: 100%;
+
+            &:hover {
+                background-color: $orange;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+    #play-button {
+        margin-left: 1rem;
+
+        .fa {
+            margin-right: 0.2rem;
+        }
+    }
+}
+
+
+
+#colors {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
 }
 
 .color {
-    width: 3rem;
-    height: 3rem;
+    flex-basis: 50%;
+    height: 6rem;
 }
 
+#level-info {
+    background-color: $white;
+    padding: 1rem;
+    text-align: center;
+
+    #current-level {
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+}
+
+#lost, #won {
+    text-align: center;
+    background-color: $white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(1.0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 
 .red {
@@ -28,7 +133,8 @@ body {
 }
 
 .red-is-selected { 
-    background-color: lighten(saturate($red, 100%), 15%); 
+    background-color: lighten(saturate($red, 100%), 15%);
+    animation: bounceIn 1s;
 }
 
 .red-hover {
@@ -45,6 +151,7 @@ body {
 
 .green-is-selected { 
     background-color: lighten(saturate($green, 100%), 15%); 
+    animation: bounceIn 1s;
 }
 
 .green-hover {
@@ -64,6 +171,7 @@ body {
 
 .blue-is-selected { 
     background-color: lighten(saturate($blue, 100%), 15%); 
+    animation: bounceIn 1s;
 }
 
 .blue-hover {
@@ -76,13 +184,13 @@ body {
 
 
 
-
 .yellow {
     background-color: $yellow;
 }
 
 .yellow-is-selected { 
     background-color: lighten(saturate($yellow, 100%), 15%); 
+    animation: bounceIn 1s;
 }
 
 .yellow-hover {
