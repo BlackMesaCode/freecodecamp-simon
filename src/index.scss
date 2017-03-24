@@ -3,6 +3,98 @@
 
 
 
+$green: #00a74a;
+$red: #9f0f17;
+$yellow: #cca707;
+$blue: #094a8f;
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.color {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+
+.red {
+    background-color: $red;
+}
+
+.red-is-selected { 
+    background-color: lighten(saturate($red, 100%), 15%); 
+}
+
+.red-hover {
+     &:hover { 
+         background-color: lighten(saturate($red, 100%), 15%); 
+         cursor: pointer;
+    }
+}
+
+
+.green {
+    background-color: $green;
+}
+
+.green-is-selected { 
+    background-color: lighten(saturate($green, 100%), 15%); 
+}
+
+.green-hover {
+     &:hover { 
+         background-color: lighten(saturate($green, 100%), 15%); 
+         cursor: pointer;
+    }
+}
+
+
+
+
+
+.blue {
+    background-color: $blue;
+}
+
+.blue-is-selected { 
+    background-color: lighten(saturate($blue, 100%), 15%); 
+}
+
+.blue-hover {
+     &:hover { 
+         background-color: lighten(saturate($blue, 100%), 15%); 
+         cursor: pointer;
+    }
+}
+
+
+
+
+
+.yellow {
+    background-color: $yellow;
+}
+
+.yellow-is-selected { 
+    background-color: lighten(saturate($yellow, 100%), 15%); 
+}
+
+.yellow-hover {
+     &:hover { 
+         background-color: lighten(saturate($yellow, 100%), 15%); 
+         cursor: pointer;
+    }
+}
+
+
+
+
 
 #profiles {
     position: fixed;
