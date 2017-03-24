@@ -4,7 +4,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: ['babel-polyfill', './src/index.js'],
     devtool: 'inline-source-map',
     target: "web", // Compile for usage in a browser-like environment (default)
     output: {
@@ -20,6 +20,7 @@ module.exports = {
         // select files to copy around
         new CopyWebpackPlugin([
             { context: 'src', from: 'images/**/*', to: '' },
+            { context: 'src', from: 'sounds/**/*', to: '' },
             { context: 'src', from: 'favicon.ico', to: '' }
             ], 
             {
@@ -54,7 +55,7 @@ module.exports = {
                     'postcss-loader'
             ]},
             {
-                test: /\.(jpg|png|gif|ttf|eot|svg|woff|woff2)$/,
+                test: /\.(jpg|png|gif|ttf|eot|svg|woff|woff2|mp3)$/,
                 loader: 'url-loader',
                 options: {
                     limit: 25000

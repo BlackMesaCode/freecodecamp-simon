@@ -35,6 +35,7 @@ module.exports = {
         // select files to copy around
         new CopyWebpackPlugin([
             { context: 'src', from: 'images/**/*', to: '' },
+            { context: 'src', from: 'sounds/**/*', to: '' },
             { context: 'src', from: 'favicon.ico', to: '' }
             ], 
             {
@@ -81,7 +82,7 @@ module.exports = {
                 })
             },
             {
-                test: /\.(jpg|png|gif|ttf|eot|svg|woff|woff2)$/,
+                test: /\.(jpg|png|gif|ttf|eot|svg|woff|woff2|mp3)$/,
                 loader: 'url-loader',
                 options: {
                     limit: 25000
