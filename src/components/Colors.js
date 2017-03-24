@@ -16,7 +16,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="colors">
                 <div className={classNames('color', 'red', {'red-is-selected': this.props.selectedColor === 'red'}, {'red-hover': this.props.inputEnabled})} onClick={this.chooseColor("red")}></div>
                 <div className={classNames('color', 'green', {'green-is-selected': this.props.selectedColor === 'green'}, {'green-hover': this.props.inputEnabled})} onClick={this.chooseColor("green")}></div>
                 <div className={classNames('color', 'blue', {'blue-is-selected': this.props.selectedColor === 'blue'}, {'blue-hover': this.props.inputEnabled})} onClick={this.chooseColor("blue")}></div>
