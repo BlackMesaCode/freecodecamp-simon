@@ -135,23 +135,23 @@ export default class App extends React.Component {
     playColorSound(color) {
         if (color) {
             let indexOfColor = this.colors.indexOf(color) + 1;
-            var audio = new Audio(`../sounds/${indexOfColor}.mp3`);
+            var audio = new Audio(`http://usr.antares.uberspace.de/freecodecamp-simon/${indexOfColor}.mp3`);
             audio.play();
         }
     }
 
     playLostSound() {
-        var audio = new Audio(`../sounds/lost.mp3`);
+        var audio = new Audio("http://usr.antares.uberspace.de/freecodecamp-simon/lost.mp3");
         audio.play();
     }
 
     playWonSound() {
-        var audio = new Audio(`../sounds/won.mp3`);
+        var audio = new Audio("http://usr.antares.uberspace.de/freecodecamp-simon/won.mp3");
         audio.play();
     }
 
     playWrongSound() {
-        var audio = new Audio(`../sounds/wrong.mp3`);
+        var audio = new Audio("http://usr.antares.uberspace.de/freecodecamp-simon/wrong.mp3");
         audio.play();
     }
 
